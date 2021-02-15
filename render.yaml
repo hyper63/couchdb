@@ -12,5 +12,5 @@ services:
     - key: COUCHDB_USER
       value: admin
     - key: COUCHDB_PASSWORD
-      generateValue: true
+      value: password
 
