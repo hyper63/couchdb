@@ -1,0 +1,16 @@
+services:
+- type: pserv
+  name: couchdb
+  env: docker
+  plan: standard
+  disk:
+    name: couchdata
+    mountPath: /opt/couchdb/data
+    sizeGB: 50
+  autoDeploy: false
+  envVars:
+    - key: COUCHDB_USER
+      value: admin
+    - key: COUCHDB_PASSWORD
+      generateValue: true
+
